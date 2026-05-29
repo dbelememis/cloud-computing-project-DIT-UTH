@@ -26,6 +26,15 @@
      Με λίγα λόγια , σε σύγχρονο cloud περιβάλλον αυτή η εφαρμογή δεν θα μπορούσε να σταθεί.
      
 2) Έτσι λοιπόν στόχος μας είναι να φτιάξουμε μία cloud native distributed εφαρμογή.
+  - Η τελική αρχιτεκτονική έπρεπε:
+    να εκθέτει web API
+    να τρέχει μέσα σε containers
+    να γίνεται deploy σε Kubernetes
+    να κάνει dynamic scaling
+    να υποστηρίζει orchestration
+    να υποστηρίζει self-healing
+    να υποστηρίζει cloud deployment principles
+
    
    
    
