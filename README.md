@@ -27,13 +27,26 @@
      
 2) Έτσι λοιπόν στόχος μας είναι να φτιάξουμε μία cloud native distributed εφαρμογή.
   - Η τελική αρχιτεκτονική έπρεπε:
-    να εκθέτει web API
-    να τρέχει μέσα σε containers
-    να γίνεται deploy σε Kubernetes
-    να κάνει dynamic scaling
-    να υποστηρίζει orchestration
-    να υποστηρίζει self-healing
-    να υποστηρίζει cloud deployment principles
+  - να εκθέτει web API
+  - να τρέχει μέσα σε containers
+  - να γίνεται deploy σε Kubernetes
+  - να κάνει dynamic scaling
+  - να υποστηρίζει orchestration
+  - να υποστηρίζει self-healing
+  - να υποστηρίζει cloud deployment principles
+
+3) Τεχνολογίες που χρησιμοποιήσαμε:
+   Python --> η main γλώσσα προγραμματισμού
+   FastAPI --> REST API framework
+   OpenCV --> για επεξεργασία εικόνας
+   Docker --> για containerization
+   DockerHub --> για image registry
+   Kubernetes --> για container ενορχήστρωση
+   kubectl --> για kubernetes διαχείριση και πλοήγηση
+   HPA -> για αυτόματη κλιμάκωση εφαρμογής
+   github --> version control
+4) Χρήση FastAPI:
+   
 
    
    
