@@ -36,15 +36,15 @@
   - να υποστηρίζει cloud deployment principles
 
 3) Τεχνολογίες που χρησιμοποιήσαμε:
-   Python --> η main γλώσσα προγραμματισμού
-   FastAPI --> REST API framework
-   OpenCV --> για επεξεργασία εικόνας
-   Docker --> για containerization
-   DockerHub --> για image registry
-   Kubernetes --> για container ενορχήστρωση
-   kubectl --> για kubernetes διαχείριση και πλοήγηση
-   HPA -> για αυτόματη κλιμάκωση εφαρμογής
-   github --> version control
+  - Python --> η main γλώσσα προγραμματισμού
+  - FastAPI --> REST API framework
+  - OpenCV --> για επεξεργασία εικόνας
+  - Docker --> για containerization
+  - DockerHub --> για image registry
+  - Kubernetes --> για container ενορχήστρωση
+  - kubectl --> για kubernetes διαχείριση και πλοήγηση
+  - HPA -> για αυτόματη κλιμάκωση εφαρμογής
+  - github --> version control
 4) Χρήση FastAPI:
    Στα cloud-native συστήματα η επικοινωνία γίνεται με APIs.
    Ένα απλό python script δεν έχει την δυνατότητα να επικοινωνήσει με χρήστες,browsers,άλλα services,κατανεμημένα συστήματα,cloud υποδομές.
