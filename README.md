@@ -46,7 +46,21 @@
    HPA -> για αυτόματη κλιμάκωση εφαρμογής
    github --> version control
 4) Χρήση FastAPI:
-   
+   Στα cloud-native συστήματα η επικοινωνία γίνεται με APIs.
+   Ένα απλό python script δεν έχει την δυνατότητα να επικοινωνήσει με χρήστες,browsers,άλλα services,κατανεμημένα συστήματα,cloud υποδομές.
+   Έτσι το script μετατράπηκε σε REST API με FastAPI.
+5) Το FastAPI:
+   - έχει HHTP endpoints
+   - ασύγχρονη επικοινωνία
+   - API documentation
+   - request validation
+   - κλιμάκωση backend αρχιτεκτονικής
+   - mircroservice compatibility
+   Με αυτόν τον τρόπο μπορούμε να μετατρέψουμε την εφαρμογή μας σε προσβάσιμη web microservice.
+6) Αρχιτεκτονική FastAPI:
+   Client-->HTTP request-->FastAPI-->επεξεργασία εικόνας-->ανταπόκριση
+   (απομακρυσμένη επικοινωνία μέσω HTTp requests)
+7)
 
    
    
