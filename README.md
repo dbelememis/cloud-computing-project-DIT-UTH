@@ -45,10 +45,12 @@
   - kubectl --> για kubernetes διαχείριση και πλοήγηση
   - HPA -> για αυτόματη κλιμάκωση εφαρμογής
   - github --> version control
+  - 
 4) Χρήση FastAPI:
    Στα cloud-native συστήματα η επικοινωνία γίνεται με APIs.
    Ένα απλό python script δεν έχει την δυνατότητα να επικοινωνήσει με χρήστες,browsers,άλλα services,κατανεμημένα συστήματα,cloud υποδομές.
    Έτσι το script μετατράπηκε σε REST API με FastAPI.
+
 5) Το FastAPI:
    - έχει HHTP endpoints
    - ασύγχρονη επικοινωνία
@@ -57,10 +59,21 @@
    - κλιμάκωση backend αρχιτεκτονικής
    - mircroservice compatibility
    Με αυτόν τον τρόπο μπορούμε να μετατρέψουμε την εφαρμογή μας σε προσβάσιμη web microservice.
+
 6) Αρχιτεκτονική FastAPI:
    Client-->HTTP request-->FastAPI-->επεξεργασία εικόνας-->ανταπόκριση
    (απομακρυσμένη επικοινωνία μέσω HTTp requests)
-7)
+   
+8) API endpoint:
+
+  POST/grayscale
+  Παίρνει μία uploaded εικόνα , γίνεται επεξεργασία με OpenCV , γίνεται μετατροπή σε grayscale , επιστροφή της επεξεργασμένης εικόνας.
+  
+8) Swagger:
+  Το FastAPI διαθέτει αυτόματο API documentation. Έτσι το FastAPI δημιουργεί αυτόματα Swagger UI και OpenAPI schema.Έπειτα το documentation γίνεται διαθέσιμο μέσω http://127.0.0.1:8000/docs . Με αυτόν τον τρόπο το testing και το development έγιναν πολύ πιο απλά.
+
+9) Docker και Containerization:
+    Το kubernetes δεν μπορεί να κάνει deploy raw python scriptakia , έτσι το kubernetes κάνει deploy containers.
 
    
    
