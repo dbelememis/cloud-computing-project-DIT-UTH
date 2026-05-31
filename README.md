@@ -187,7 +187,21 @@
 
       Η εφαρμορή έγινε deploy ωε kubernetes pods .
 
-  23)
+  23) Deployment διαδικασία
+
+      Το deployment έγινε με την ακόλουθη εντολή:
+      
+      kubectl apply -f deployment.yaml
+      
+      Τώρα το kubernetes :
+      - έφτιαξε pods
+      - έκανε pull τα docker images
+      - έγινε εκκίνηση των containers
+      - έκανε αυτόματη διαχείρηση της εκτέλεσης
+
+  24) Kubernetes self-healing
+
+      
 
 
 
