@@ -247,11 +247,22 @@
         - pod resource usage
       Αποκτήσαμε πρόσβαση σε αυτά μέσω :
         kubectl top pods
-  30) Resource requests limits
+      NAME                        CPU   MEMORY
+      image-api-584dbcfd8-rhg82   2m    46Mi
+
+        kubectl get pods
+      1 Running Pod
+      Η CPU βρισκόταν περίπου στο:
+              2%
+      επομένως δεν υπήρχε λόγος δημιουργίας νέων Pods.
+      
+
+  31) Resource requests limits
 
       Τα requests ορίζουν:
 
         minimum guaranteed resources
+      
       Τα limits ορίζουν:
 
         maximum allwed resources
@@ -262,14 +273,14 @@
         - κλιμάκωση
         - σταθεροποίηση cluster
 
-  31) CPU requests
+  33) CPU requests
 
       cpu requsts με χρήση millicores
       cpu: "100m"
       δηλαδή 0.1 cpu core
       το kubernetes χρησιμοποιεί αυτές τις τιμές για να υπολογίζει utilization percentages.
 
-  32) Horizontinal Pod Autoscaler (HPA)
+  34) Horizontinal Pod Autoscaler (HPA)
 
       Σε καινούργια cloud συστήματα η προσαρμογή τους πρέπει να γίνεται δυναμικά.
       χωρις αυτόματη κλιμάκωση :
@@ -278,6 +289,17 @@
         - η απόδοση πέφτει σε traffic spikes
         - το infrastructure γίνεται inefficient
       Το HPA έβλεπε το cpu utilization και προσάρμοζε ανάλογα δυναμικά.
+      1. συλλογή metrics
+      2. υπολογισμός μέσου φορτίου
+      3. σύγκριση με threshold
+      4. απόφαση κλιμάκωσης
+      5. δημιουργία ή διαγραφή pods
+
+      Δημιουργήθηκε το αρχείο hpa.yaml . Το HPA συνδέθηκε με το deployment της εφαρμογής.
+      minReplicas: 1 ( η εφαρμογή θα έχει πάντα τουλάχιστον ένα pod)
+      maxReplicas: 5 ( η εφαρμογή μπορεί να έχει μέχρι max 5 pod )
+      averageUtilization: 50 ( όταν η μέση χρήση της cpu ξεπεράσει το 50% τότε γίνεται scale up)
+      
 
       
 
