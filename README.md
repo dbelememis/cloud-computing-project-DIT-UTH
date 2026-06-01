@@ -201,6 +201,84 @@
 
   24) Kubernetes self-healing
 
+      Όταν έγινε διαγραφή των pods με :
+        kubectl delete pod -l app=image=api
+      το kubernetes το δημιούργησε αυτόματα λόγω του desired state του deployment.
+
+  25) Kubernetes networking
+
+      Services:
+        Τα pods έχουν όλα προσωρινές IP.Αν τα pods κάνουν επανεκκίνηση οι IP αλλάζουν και έτσι η επικοινωνία σταματά.Έτσι πρέπει να υπάρχει σταθερό networking abstraction.
+
+      Kubernetes Services:
+
+        - σταθερό σημείο πρόσβασης
+        - traffic forwarding
+        - load balancing
+        - service discovery
+      το service συνδέει τους χρήστες με τα pods
+  26) Nodeport service
+
+      Με το nodeport service η εφαρμογή έγινε exposed μέσω networking port στα cluster nodes.
+      Το congifuration περιέχει:
+
+       - external port
+       - internal target port
+       - pod selectors
+
+  27) Port forwarding
+
+      Το πανεπηστιμιακό kubernetes cluster χρησιμοποιεί restricted networking . Για αυτόν τον λόγο χρησιμοποιήθηκε kubectl port-forward . Με αυτό δημιουργήθηκε ασφαλές local tunnel .
+      PC --> KUBERNETES SERVICE --> POD
+
+  28) Πρόσβαση στην εφαρμογή
+
+      Κάναμε port forwarding και έπειτα αποκτήσαμε πρόσβαση στην εφαρμογή μέσω του :
+      http://127.0.0.1:8000/docs
+      Αφού συνδέθηκε καταλάβαμε ότι το kubernetes networking πέτυχε.
+
+  29) Metrics server
+
+      Για να λειτουργήσει το auto scaling του kubernetes πρέπει νσ έχουμε resource metrics.
+      Ένας metrics server δινει πληροφορίες για :
+
+        - cpu metrics
+        - memory metrics
+        - pod resource usage
+      Αποκτήσαμε πρόσβαση σε αυτά μέσω :
+        kubectl top pods
+  30) Resource requests limits
+
+      Τα requests ορίζουν:
+
+        minimum guaranteed resources
+      Τα limits ορίζουν:
+
+        maximum allwed resources
+
+      Αυτά είναι αναγκαία για:
+
+        - scheduling
+        - κλιμάκωση
+        - σταθεροποίηση cluster
+
+  31) CPU requests
+
+      cpu requsts με χρήση millicores
+      cpu: "100m"
+      δηλαδή 0.1 cpu core
+      το kubernetes χρησιμοποιεί αυτές τις τιμές για να υπολογίζει utilization percentages.
+
+  32) Horizontinal Pod Autoscaler (HPA)
+
+      Σε καινούργια cloud συστήματα η προσαρμογή τους πρέπει να γίνεται δυναμικά.
+      χωρις αυτόματη κλιμάκωση :
+
+        - σπατάλη πόρων
+        - η απόδοση πέφτει σε traffic spikes
+        - το infrastructure γίνεται inefficient
+      Το HPA έβλεπε το cpu utilization και προσάρμοζε ανάλογα δυναμικά.
+
       
 
 
