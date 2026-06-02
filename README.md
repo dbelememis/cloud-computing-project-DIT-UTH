@@ -346,14 +346,69 @@
           σε:
               5 Pods
           χωρίς καμία χειροκίνητη παρέμβαση.Αυτό αποτελεί άμεση απόδειξη επιτυχημένου auto scaling.
+
+      Load Balancing
+
+        Μετά τη δημιουργία νέων Pods, το Kubernetes Service συνέχισε να δέχεται τα αιτήματα των χρηστών , το Service διένειμε τα αιτήματα αυτόματα στα διαθέσιμα Pods.
+        
+        Έτσι επιτεύχθηκε:
+          καλύτερη απόδοση
+          καλύτερη αξιοποίηση πόρων
+          υψηλότερη διαθεσιμότητα
+
+      SELF HEALING
+
+        Πραγματοποιήθηκε δοκιμή διαγράφοντας χειροκίνητα τα Pods:
+          kubectl delete pod -l app=image-api
+      
+        Παρότι τα Pods διαγράφηκαν, το Deployment παρέμεινε ενεργό , το Kubernetes εντόπισε ότι ο πραγματικός αριθμός Pods ήταν μικρότερος από τον επιθυμητό.
+        Το Kubernetes δημιούργησε νέα Pods αυτόματα , η εφαρμογή επανήλθε σε πλήρη λειτουργία χωρίς καμία ανθρώπινη παρέμβαση.
+
+        Το self-healing αποτελεί βασικό χαρακτηριστικό των cloud-native εφαρμογών.
+
+          Παρέχει:
+            υψηλή διαθεσιμότητα
+            ανοχή σε σφάλματα
+            αυτόματη αποκατάσταση βλαβών
+      
+
+        ΣΥΜΠΕΡΑΣΜΑΤΑ
+
+              Το αρχικό standalone Python script μετατράπηκε επιτυχώς σε cloud-native εφαρμογή.
+              Η τελική λύση υποστηρίζει:
+
+                  REST API
+                  Containerization
+                  Kubernetes orchestration
+                  Dynamic scaling
+                  Service discovery
+                  Self-healing
+                  Load balancing
+
+            Κατά την ανάπτυξη του project εφαρμόστηκαν στην πράξη:
+
+              Cloud-Native Architecture
+              Microservices
+              Containerization
+              Container Orchestration
+              Scalability
+              Elasticity
+              Self-Healing Systems
+              Distributed Computing
+              Resource Optimization
+              Infrastructure Automation
+
+          Το project απέδειξε ότι ακόμη και μια απλή εφαρμογή επεξεργασίας εικόνας μπορεί να μετατραπεί σε μια πλήρως cloud-native υπηρεσία χρησιμοποιώντας σύγχρονες τεχνολογίες                 containerization και orchestration.
+
+          Η χρήση Docker και Kubernetes επέτρεψε:
+
+            αυτοματοποίηση ανάπτυξης
+            δυναμική κλιμάκωση
+            αυτόματη ανάκτηση από σφάλματα
+            αποδοτική χρήση πόρων
+
+          αποδεικνύοντας στην πράξη τις βασικές αρχές του Cloud Computing.
           
-      
-      
-
-      
-
-
-
 
 
 
