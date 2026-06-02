@@ -120,11 +120,9 @@
 
       Το πρόβλημα λύθηκε με:
 
-          εγκατάσταση missing Linux libraries
-
-          σωστό configuration dependencies
-
-          rebuild του Docker image
+         - εγκατάσταση missing Linux libraries
+         - σωστό configuration dependencies
+         - rebuild του Docker image
 
       Αυτό ανέδειξε ένα σημαντικό cloud concept:
 
@@ -147,11 +145,9 @@
 
       Ένα container registry λειτοργεί ως :
 
-        centralized image storage
-
-        deployment source
-
-        distribution mechanism
+       - centralized image storage
+       - deployment source
+       - distribution mechanism
 
       αυτή είναι η βασική έννοια των cloud-native deployment αρχιτεκτωνικών.
 
@@ -352,9 +348,9 @@
         Μετά τη δημιουργία νέων Pods, το Kubernetes Service συνέχισε να δέχεται τα αιτήματα των χρηστών , το Service διένειμε τα αιτήματα αυτόματα στα διαθέσιμα Pods.
         
         Έτσι επιτεύχθηκε:
-          καλύτερη απόδοση
-          καλύτερη αξιοποίηση πόρων
-          υψηλότερη διαθεσιμότητα
+         - καλύτερη απόδοση
+         - καλύτερη αξιοποίηση πόρων
+         - υψηλότερη διαθεσιμότητα
 
       SELF HEALING
 
@@ -367,9 +363,9 @@
         Το self-healing αποτελεί βασικό χαρακτηριστικό των cloud-native εφαρμογών.
 
           Παρέχει:
-            υψηλή διαθεσιμότητα
-            ανοχή σε σφάλματα
-            αυτόματη αποκατάσταση βλαβών
+           - υψηλή διαθεσιμότητα
+           - ανοχή σε σφάλματα
+           - αυτόματη αποκατάσταση βλαβών
       
 
         ΣΥΜΠΕΡΑΣΜΑΤΑ
@@ -377,35 +373,35 @@
               Το αρχικό standalone Python script μετατράπηκε επιτυχώς σε cloud-native εφαρμογή.
               Η τελική λύση υποστηρίζει:
 
-                  REST API
-                  Containerization
-                  Kubernetes orchestration
-                  Dynamic scaling
-                  Service discovery
-                  Self-healing
-                  Load balancing
+                 - REST API
+                 - Containerization
+                 - Kubernetes orchestration
+                 - Dynamic scaling
+                 - Service discovery
+                 - Self-healing
+                 - Load balancing
 
             Κατά την ανάπτυξη του project εφαρμόστηκαν στην πράξη:
 
-              Cloud-Native Architecture
-              Microservices
-              Containerization
-              Container Orchestration
-              Scalability
-              Elasticity
-              Self-Healing Systems
-              Distributed Computing
-              Resource Optimization
-              Infrastructure Automation
+             - Cloud-Native Architecture
+             - Microservices
+             - Containerization
+             - Container Orchestration
+             - Scalability
+             - Elasticity
+             - Self-Healing Systems
+             - Distributed Computing
+             - Resource Optimization
+             - Infrastructure Automation
 
           Το project απέδειξε ότι ακόμη και μια απλή εφαρμογή επεξεργασίας εικόνας μπορεί να μετατραπεί σε μια πλήρως cloud-native υπηρεσία χρησιμοποιώντας σύγχρονες τεχνολογίες                 containerization και orchestration.
 
           Η χρήση Docker και Kubernetes επέτρεψε:
 
-            αυτοματοποίηση ανάπτυξης
-            δυναμική κλιμάκωση
-            αυτόματη ανάκτηση από σφάλματα
-            αποδοτική χρήση πόρων
+           - αυτοματοποίηση ανάπτυξης
+           - δυναμική κλιμάκωση
+           - αυτόματη ανάκτηση από σφάλματα
+           - αποδοτική χρήση πόρων
 
           αποδεικνύοντας στην πράξη τις βασικές αρχές του Cloud Computing.
           
